@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+const birthYear = prompt("سال تولد خود را وارد کنید:");
+const birthMonth = prompt("ماه تولد خود را وارد کنید:");
+const birthDay = prompt("روز تولد خود را وارد کنید:");
+
+const birthDate = new Date(`${birthYear}-${birthMonth}-${birthDay}`);
+
+const ageInMilliseconds = Date.now() - birthDate.getTime();
+const ageInSeconds = ageInMilliseconds / 1000;
+const ageInMinutes = ageInSeconds / 60;
+const ageInHours = ageInMinutes / 60;
+const ageInDays = ageInHours / 24;
+const ageInYears = ageInDays / 365;
+
+console.log(`شما ${Math.floor(ageInYears)} سال، ${Math.floor(ageInDays % 365)} روز، ${Math.floor((ageInHours % 24))} ساعت، ${Math.floor((ageInMinutes % 60))} دقیقه و ${Math.floor((ageInSeconds % 60))} ثانیه سن دارید.`);
+
+    </script>
+</body>
+</html>

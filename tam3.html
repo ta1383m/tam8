@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var birthDate = prompt("لطفاً تاریخ تولد خود را به فرمت yyyy/mm/dd وارد کنید:");
+var dateOfBirth = new Date(birthDate);
+var ageInMilliseconds = Date.now() - dateOfBirth.getTime();
+var ageInYears = Math.floor(ageInMilliseconds / 1000 / 60 / 60 / 24 / 365);
+console.log("سن شما: " + ageInYears + " سال");
+
+    </script>
+</body>
+</html>
